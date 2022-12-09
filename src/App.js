@@ -38,7 +38,7 @@ function App() {
     }).catch((error)=>{
 
       console.log("error_long_access_token", error)
-      
+
     })
 
   }, [shortaccess])
@@ -116,11 +116,11 @@ useEffect(() => {
   console.log(data)
   console.log(longaccess)
 
-  axios.get(`https://graph.facebook.com/${userid}/accounts?access_token=${longaccess}`).then((data)=>{
-    console.log(data);
-  }).catch((err)=>{
-    console.log(err);
-  })
+  // axios.get(`https://graph.facebook.com/${userid}/accounts?access_token=${longaccess}`).then((data)=>{
+  //   console.log(data);
+  // }).catch((err)=>{
+  //   console.log(err);
+  // })
 
   window.FB.api(
     "/me/photos",
